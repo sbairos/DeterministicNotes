@@ -4,7 +4,9 @@ Different ways to hash a phrase, so I can remember
 
 Bash
 
+<pre><code>set +o history</code></pre>
 <pre><code>echo -n 'user:phrase:0:example-site' | openssl dgst -sha256 -binary | openssl base64 | sed -e 's/[^0-9A-Za-z]//g' | egrep -o '.{3}' | head -5 | paste -sd'-' -</code></pre>
+<pre><code>set -o history</code></pre>
 
 
 Python
